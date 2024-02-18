@@ -55,7 +55,8 @@ while (m_1 == 0)||(m_1 == 1)
     current_state = table(m_0, m_minus1);
     next_state = table(m_1, m_0);
     output_values = table(x_1, x_2, x_3);
-    tmp = table(input_value, current_state, next_state, output_values)
+    T = table(input_value, current_state, next_state, output_values);
+    disp(T)
 
     % Shift Registers
     m_minus1 = m_0;
@@ -63,7 +64,7 @@ while (m_1 == 0)||(m_1 == 1)
 
     % Prompt user for binary input
     while true
-        msg = "Enter the next input bit, or press 'q' to quit: ";
+        msg = "Enter the next input bit, or press 'q' to quit: ";    
         user_input = input(msg, "s"); % 's' forces input to string 
         if isempty(user_input)
             disp('Input cannot be empty. Please enter a binary number.');
