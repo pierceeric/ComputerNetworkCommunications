@@ -39,7 +39,7 @@ m_0 = 0;        % Regiser 1
 m_minus1 = 0;   % register 2
 
 
-while (m_1 == 0)||(m_1 == 1)
+while true
     
     % Calculate outputs
     x_1 = xor ((xor (m_1, m_0)),m_minus1); % 3-input xor
